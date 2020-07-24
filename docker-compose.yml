@@ -1,0 +1,27 @@
+version: "3"
+services:
+  discuz: 
+    image: discuz:3.4
+    ports:
+      - "8889:80"
+    restart: always
+    links:
+      - mysql
+    depends_on:
+      - mysql
+    volumes:
+      - ./volumes/discuzx:/var/www/html
+  mysql:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      - MYSQL_ROOT_PASSWORD=Passw0rd!
+    ports:
+      - "3306"
+    restart: always
+    volumes:
+      - ./volumes/mysql:/var/lib/mysql
+
+networks:
+  default:
+    driver: bridge
