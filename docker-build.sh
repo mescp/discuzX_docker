@@ -7,9 +7,7 @@ fi
 [ ! -d "volumes" ] && mkdir volumes
 if [ ! -d "volumes/discuzx" ]; then
     cp -r DiscuzX/upload/ ./volumes/discuzx
-    chmod a+w -R ./volumes/discuzx/config ./volumes/discuzx/data \ 
-        ./volumes/discuzx/uc_server/data ./volumes/discuzx/uc_client/data \ 
-        ./volumes/discuzx/install　./volumes/discuzx/template
+    chmod a+w -R volumes/discuzx/config volumes/discuzx/data volumes/discuzx/uc_server/data volumes/discuzx/uc_client/data volumes/discuzx/template volumes/discuzx/install
 fi
 
 #编译docker
