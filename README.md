@@ -1,10 +1,15 @@
-### 获取程序
+## clone
 
 `git clone https://gitee.com/ComsenzDiscuz/DiscuzX`
 
-### **docker build**
+### docker build
 
-1. `docker-build.sh`
+ `docker-build.sh`
 
-2. `docker-compose up -d`
+### docker-compose
 
+ `docker-compose up -d`
+
+### config
+
+ 数据库服务器设置为`mysql`密码设置为`Passw0rd!`
